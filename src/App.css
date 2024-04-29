@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+
+.row {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px 10px;
+
+}
+
+/* .row  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px 10px;
+} */
+
+.card {
+  /* margin: auto 10px; */
+}
+.card-img{
+  border-radius: 20px;
+  width: 316px;
+  height: 220px;
+}
+
+.text-box{ 
+  text-align: left;
+  margin-top: 12px;
+}
+
+.text-box p, .text-box h2{
+  margin: 6px auto;
+}
+
+/* make title text clamp to two lines, all other clamp to 1 line */
+.text-box__event-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+        overflow: hidden;
+}
+
+.text-box > *:not(:first-child) {
+    display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+}

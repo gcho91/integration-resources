@@ -1,0 +1,42 @@
+.card-img {
+    border-radius: 20px;
+    width: 316px;
+    height: 220px;
+}
+
+.text-box {
+    text-align: left;
+    margin-top: 12px;
+}
+
+.text-box p,
+.text-box h2 {
+    margin: 6px auto;
+}
+
+/* make title text clamp to two lines, all other clamp to 1 line */
+/* .text-box__event-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+} */
+
+.title-text {
+
+  
+}
+
+.description {
+        display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+}
+/* .text-box>*:not(:first-child) { */
+.text-box>*:nth-child(n+3) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}

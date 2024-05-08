@@ -1,6 +1,8 @@
+import style from "./Card.module.css";
+
 function Card(props) {
   return (
-    <div className="card" key={props.name}>
+    <div className={style.card} key={props.name}>
       <a href={props.url} target="_blank" rel="noreferrer">
         {/* todo: react link to info page */}
         <img
@@ -10,13 +12,13 @@ function Card(props) {
           }
           alt=""
           style={{ width: "100%", objectFit: "cover" }}
-          className="card-img"
+          className={style["card-img"]}
         />
       </a>
-      <div className="text-box">
-        <h2 className="text-box__event-name">{props.eventName}</h2>
-        <p>Host: {props.hostName || props.name}</p>
-        <p>Date: {props.date || props.frequency}</p>
+      <div className={style["text-box"]}>
+        <h2 className={style["title-text"]}>{props.hostName}</h2>
+        <p className={style.description}>{props.description}</p>
+        <p>Frequency: {props.date || props.frequency}</p>
         <p>Location: {props.location}</p>
         <p>Cost: {props.cost}</p>
       </div>

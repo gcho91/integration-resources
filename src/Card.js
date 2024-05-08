@@ -3,7 +3,7 @@ import style from "./Card.module.css";
 
 function Card(props) {
   return (
-    <div className={style.card} key={props.name}>
+    <div className={style.card}>
       <a href={props.url} target="_blank" rel="noreferrer">
         {/* todo: react link to info page */}
         <img

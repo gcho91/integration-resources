@@ -1,7 +1,7 @@
 import style from "./CardOther.module.css";
 function CardOther(props) {
   return (
-    <div className={style.card} key={props.name}>
+    <div className={style.card}>
       <a href={props.linkUrl} target="_blank" rel="noreferrer">
         <img
           src={

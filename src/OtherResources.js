@@ -17,8 +17,8 @@ function OtherResources() {
     <div>
       <h1>Other Resources</h1>
       <div className={style.row}>
-        {resources.map((item) => {
-          return <CardOther {...item} />;
+        {resources.map((item, index) => {
+          return <CardOther {...item} key={index} />;
         })}
       </div>
     </div>

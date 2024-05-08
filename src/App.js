@@ -10,11 +10,11 @@ function App() {
     <div className={style.App}>
       <ul>
         <li>
-          <Link to="/mainlistings">Main Listings</Link>
+          <Link to="/">Main Listings</Link>
         </li>
       </ul>
 
-      <div class={style.test}>
+      <div className={style.test}>
         <div className="item">hi</div>
         <div className="item">hi</div>
         <div className="item">hi</div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 
 function Card(props) {
@@ -16,7 +17,11 @@ function Card(props) {
         />
       </a>
       <div className={style["text-box"]}>
-        <h2 className={style["title-text"]}>{props.hostName}</h2>
+        {/* <h2 className={style["title-text"]}>{props.hostName}</h2> */}
+        {/* click on host name -> go to org page */}
+        <Link to={`/org/${props.id}`}>
+          <h2 className={style["title-text"]}>{props.hostName}</h2>
+        </Link>
         <p className={style.description}>{props.description}</p>
         <p>Frequency: {props.date || props.frequency}</p>
         <p>Location: {props.location}</p>

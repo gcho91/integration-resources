@@ -3,6 +3,7 @@ import style from "./App.module.css";
 import { Link, Route, Routes } from "react-router-dom";
 
 import MainListing from "./MainListing";
+import EventsView from "./EventsView";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<MainListing />} />
+        <Route path="/org/:id" element={<EventsView />} />
       </Routes>
       {/* <h1>Psychedelics and Plant Medicine Integration Groups</h1>
       <p>Resources for Harm Reduction</p> */}

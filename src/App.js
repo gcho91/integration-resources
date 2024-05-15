@@ -4,21 +4,13 @@ import { Link, Route, Routes } from "react-router-dom";
 
 import MainListing from "./MainListing";
 import EventsView from "./EventsView";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className={style.App}>
-      <ul>
-        <li>
-          <Link to="/">Main Listings</Link>
-        </li>
-      </ul>
+      <Navbar />
 
-      <div className={style.test}>
-        <div className="item">hi</div>
-        <div className="item">hi</div>
-        <div className="item">hi</div>
-      </div>
       <Routes>
         <Route path="/" element={<MainListing />} />
         <Route path="/org/:id" element={<EventsView />} />

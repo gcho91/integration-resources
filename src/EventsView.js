@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import listings from "./listings.json";
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 
 function EventsView({}) {
   const { id } = useParams();
@@ -8,6 +8,9 @@ function EventsView({}) {
     return listings.filter((item) => item.id.toString() === id);
   }, [id]);
 
+  useEffect(() => {
+    console.log(event.events, "event");
+  }, [id]);
   if (filtered.length === 0) {
     return <h1>No match found</h1>;
   }
@@ -18,6 +21,12 @@ function EventsView({}) {
     <div>
       {/* <h1>ID: {id}</h1> */}
       <h1>{event.hostName}</h1>
+      <p>{event.description}</p>
+      <p>
+        {event.events.map((item, ind) => {
+          return <p>{item.name}</p>;
+        })}
+      </p>
     </div>
   );
 }

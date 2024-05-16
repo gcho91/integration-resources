@@ -13,7 +13,7 @@ function MainListing() {
         })}{" "}
       </div>
 
-      <OtherResources />
+      {/* <OtherResources /> */}
     </div>
   );
 }

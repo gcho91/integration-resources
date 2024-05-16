@@ -10,11 +10,11 @@ function Navbar() {
           <Link to="/" className={style.link}>
             Main Listings
           </Link>
-          <Link to="/" className={style.link}>
-            Link 2
+          <Link to="/resources" className={style.link}>
+            Resources
           </Link>
-          <Link to="/" className={style.link}>
-            Link 3
+          <Link to="/feed" className={style.link}>
+            Events Feed
           </Link>
         </ul>
       </div>

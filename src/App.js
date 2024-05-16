@@ -5,6 +5,8 @@ import { Link, Route, Routes } from "react-router-dom";
 import MainListing from "./MainListing";
 import EventsView from "./EventsView";
 import Navbar from "./components/Navbar/Navbar";
+import OtherResources from "./OtherResources";
+import Feed from "./Feed";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<MainListing />} />
+        <Route path="/resources" element={<OtherResources />} />
+        <Route path="/feed" element={<Feed />} />
         <Route path="/org/:id" element={<EventsView />} />
       </Routes>
       {/* <h1>Psychedelics and Plant Medicine Integration Groups</h1>

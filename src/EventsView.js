@@ -19,7 +19,6 @@ function EventsView({}) {
 
   return (
     <div>
-      {/* <h1>ID: {id}</h1> */}
       <h1>{event.hostName}</h1>
       <p>{event.description}</p>
       <p>

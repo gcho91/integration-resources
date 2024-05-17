@@ -6,7 +6,7 @@ import MainListing from "./MainListing";
 import EventsView from "./EventsView";
 import Navbar from "./components/Navbar/Navbar";
 import OtherResources from "./OtherResources";
-import Feed from "./Feed";
+import Feed from "./components/Feed/Feed";
 
 function App() {
   return (

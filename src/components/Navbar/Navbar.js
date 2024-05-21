@@ -5,7 +5,9 @@ function Navbar() {
   return (
     <nav className={style.container}>
       <div className={style.innerContainer}>
-        <p className={style.navLogo}>Integration Finder</p>
+        <Link to="/" className={style.navLogoLink}>
+          <p className={style.navLogo}>Integration Finder</p>
+        </Link>
         <ul className={style.navList}>
           <Link to="/" className={style.link}>
             Main Listings

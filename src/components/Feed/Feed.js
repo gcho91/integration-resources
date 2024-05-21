@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import EventInfo from "../EventInfo/EventInfo";
+import { Link } from "react-router-dom";
 
 import style from "./Feed.module.css";
 
@@ -61,13 +64,16 @@ function Feed() {
     <div className={style.container}>
       <h1>Events Feed</h1>
       <div>
-        {events.map((item) => {
+        {events.map((item, ind) => {
           return (
-            <div className={style.eventContainer}>
+            <div className={style.eventContainer} key={ind}>
               <img src={item.imgUrl} className={style.img} alt="" />
 
               <div className={style.textBox}>
-                <h1>{item.name}</h1>
+                {/* <Link to="/feed/events">  */}
+                <Link to={`/feed/events/${item.eventId}`}>
+                  <h1>{item.name}</h1>
+                </Link>
                 <p>{item.date}</p>
                 <p>{item.description}</p>
               </div>

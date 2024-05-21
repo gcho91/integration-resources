@@ -2,6 +2,12 @@
 .navLogo {
     font-size: 30px;
     font-weight: 700;
+
+}
+
+.navLogoLink:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .container {

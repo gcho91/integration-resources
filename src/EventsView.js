@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import listings from "./listings.json";
 import { useMemo, useEffect } from "react";
 
-function EventsView({}) {
+function EventsView() {
   const { id } = useParams();
   const filtered = useMemo(() => {
     return listings.filter((item) => item.id.toString() === id);
@@ -21,11 +21,15 @@ function EventsView({}) {
     <div>
       <h1>{event.hostName}</h1>
       <p>{event.description}</p>
-      <p>
-        {event.events.map((item, ind) => {
-          return <p>{item.name}</p>;
+      <div>
+        {event.events.map((item) => {
+          return (
+            <Link key={item.eventId} to={`/feed/events/${item.eventId}`}>
+              <p>{item.name}</p>
+            </Link>
+          );
         })}
-      </p>
+      </div>
     </div>
   );
 }

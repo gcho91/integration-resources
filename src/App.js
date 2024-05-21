@@ -1,12 +1,12 @@
 // import "./App.css";
 import style from "./App.module.css";
-import { Link, Route, Routes } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 import MainListing from "./MainListing";
 import EventsView from "./EventsView";
 import Navbar from "./components/Navbar/Navbar";
 import OtherResources from "./OtherResources";
 import Feed from "./components/Feed/Feed";
+import EventInfo from "./components/EventInfo/EventInfo";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path="/resources" element={<OtherResources />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/org/:id" element={<EventsView />} />
+        <Route path="/feed/events/:eventId" element={<EventInfo />} />
       </Routes>
       {/* <h1>Psychedelics and Plant Medicine Integration Groups</h1>
       <p>Resources for Harm Reduction</p> */}

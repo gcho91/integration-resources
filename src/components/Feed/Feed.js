@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
-import EventInfo from "../EventInfo/EventInfo";
 import { Link } from "react-router-dom";
-
 import style from "./Feed.module.css";
+import useFetch from "../../hooks/useFetch";
 
 // Example function to simulate fetching data from an API or JSON file
 async function fetchData() {
@@ -33,6 +31,11 @@ function sortEventsByDescDates(events) {
 }
 
 function Feed() {
+  const {
+    apiData,
+    loading: apiIsLoading,
+    error,
+  } = useFetch("/db/listings.json");
   const [loading, setLoading] = useState(true);
   const [events, setEvents] = useState([]);
 
@@ -40,6 +43,7 @@ function Feed() {
     async function loadEvents() {
       try {
         let eventsData = await fetchData();
+        // let eventsData = apiData;
         let unsortedEvents = extractData(eventsData);
         let sortedEvents = sortEventsByDescDates(unsortedEvents);
 

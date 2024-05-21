@@ -1,16 +1,16 @@
 import { useParams, Link } from "react-router-dom";
 import listings from "./listings.json";
-import { useMemo, useEffect } from "react";
+import { useMemo } from "react";
+import useFetch from "./hooks/useFetch";
 
 function EventsView() {
+  const { apiData, error, loading } = useFetch("/db/listings.json");
+  // @ to do: remove manual importing of the listings file in src
   const { id } = useParams();
   const filtered = useMemo(() => {
     return listings.filter((item) => item.id.toString() === id);
   }, [id]);
 
-  useEffect(() => {
-    console.log(event.events, "event");
-  }, [id]);
   if (filtered.length === 0) {
     return <h1>No match found</h1>;
   }

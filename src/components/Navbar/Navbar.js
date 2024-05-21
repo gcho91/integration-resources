@@ -10,13 +10,13 @@ function Navbar() {
         </Link>
         <ul className={style.navList}>
           <Link to="/" className={style.link}>
-            Main Listings
-          </Link>
-          <Link to="/resources" className={style.link}>
-            Resources
+            Organizations
           </Link>
           <Link to="/feed" className={style.link}>
             Events Feed
+          </Link>
+          <Link to="/resources" className={style.link}>
+            Resources
           </Link>
         </ul>
       </div>

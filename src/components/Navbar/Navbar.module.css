@@ -5,7 +5,7 @@
 
 }
 
-.navLogoLink:visited {
+.navLogoLink, .navLogoLink:visited {
     text-decoration: none;
     color: white;
 }

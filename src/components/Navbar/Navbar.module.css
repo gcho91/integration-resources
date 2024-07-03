@@ -1,11 +1,11 @@
-
 .navLogo {
     font-size: 30px;
     font-weight: 700;
 
 }
 
-.navLogoLink, .navLogoLink:visited {
+.navLogoLink,
+.navLogoLink:visited {
     text-decoration: none;
     color: white;
 }
@@ -20,6 +20,7 @@
 .navLogo {
     margin: 0;
 }
+
 .innerContainer {
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,38 @@
 }
 
 .navList {
-
     margin: 0;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburgerIcon {
+display: none;
+
+}
+
+.navLinks {
+display: none;
+}
+
+.navLinksActive {
+    display: flex;
+}
+
+@media screen and (max-width: 799px) {
+    .navList {
+        background: salmon;
+        display: none;
+    }
+
+  
+    .hamburgerIcon {
+        display: flex;
+    }
 }
 
 .link {

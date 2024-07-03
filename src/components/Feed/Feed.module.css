@@ -1,20 +1,22 @@
 
 .container {
-    width: 80%;
+    max-width: 850px;
     margin: 0 auto;
 }
 .eventContainer {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-
 }
-
-
 .img {
-    width: 35%;
+    width: 100%;
+    object-fit: cover;
 }
 
+
+.imgContainer {
+    width: 50%;
+}
 .textBox {
     width: 100%;
 }

@@ -71,13 +71,16 @@ function Feed() {
         {events.map((item, ind) => {
           return (
             <div className={style.eventContainer} key={ind}>
-              <img src={item.imgUrl} className={style.img} alt="" />
+              <div className={style.imgContainer}>
+                <img src={item.imgUrl} className={style.img} alt="" />
+              </div>
 
               <div className={style.textBox}>
-                {/* <Link to="/feed/events">  */}
+                {" "}
                 <Link to={`/feed/events/${item.eventId}`}>
                   <h1>{item.name}</h1>
                 </Link>
+                <p>{item.orgName}</p>
                 <p>{item.date}</p>
                 <p>{item.description}</p>
               </div>

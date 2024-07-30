@@ -1,0 +1,23 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.cardContainer {
+    display: flex;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+.imgContainer {
+    /* width: 300px; */
+    /* width: 312px;
+    height: 215px; */
+    background-color: salmon;
+}
+.img {
+    /* display: none; */
+    /* border-radius: 15px; */
+
+}

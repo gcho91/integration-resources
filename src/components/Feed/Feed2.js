@@ -1,28 +1,52 @@
-import style from "./Feed2.module.css";
+import FeedList from "../FeedList/FeedList";
+// import style from "./Feed2.module.css";
+
+// function Feed2() {
+//   return (
+//     <div className={style.feedContainer}>
+//       {/* <h1>Feed 2</h1> */}
+//       <div className={style.feedGridContainer}>
+//         <EventBox />
+//         <EventBox />
+//         <EventBox />
+//       </div>
+//     </div>
+//   );
+// }
+
 function Feed2() {
-  return (
-    <div className={style.feedContainer}>
-      <h1>Feed 2 outline</h1>
-      <div className={style.container}>
-        <div className={style.photoContainer}>
-          <img
-            className={style.image}
-            src="https://psychedelicsocietysf.org/files/Integration-Circle-FB.jpg"
-          />
-        </div>
-        <div className={style.textContainer}>
-          <h2>Event Name</h2>
-          <p>Event host</p>
-          <p>Time</p>
-          <p>
-            Description tex hdskfhajd sdafhjksdfhdas jfksdhjkf jdhfkjdshf
-            sjfahkjdfhkdf jsfhjkdf djfahjdshf djfhstdskfhajd sdafhjksdfhdas
-          </p>
-          <p>More info</p>
-        </div>
-      </div>
-    </div>
-  );
+  return <FeedList />;
 }
+// function EventBox() {
+//   return (
+//     <div
+//       style={{
+//         textAlign: "left",
+//         border: "solid 1px black",
+//         borderRadius: "10px",
+//         width: "300px",
+//       }}
+//     >
+//       <img
+//         src="https://placehold.co/600x400"
+//         style={{
+//           width: "100%",
+//           objectFit: "cover",
+//           borderRadius: "10px",
+//         }}
+//       ></img>
+
+//       <div className={style.textBox}>
+//         <h2 style={{ fontSize: 16 }}>
+//           Event Title - Weekly Psilocybin and Psychedelics Online Integration
+//           Circle
+//         </h2>
+//         <p style={{ margin: 0 }}>subtitle with group name</p>
+//         <div className={style.dateAndTimeInfo}></div>
+//         <div className={style.locationInfo}></div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default Feed2;

@@ -66,7 +66,7 @@ function Feed() {
   }
   return (
     <div className={style.container}>
-      <h1>Events Feed</h1>
+      <h1>Events Feedddd</h1>
       <div>
         {events.map((item, ind) => {
           return (

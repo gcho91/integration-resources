@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import OtherResources from "./OtherResources";
 import Feed from "./components/Feed/Feed";
 import Feed2 from "./components/Feed/Feed2";
+import Feed3 from "./components/Feed/Feed3";
 import EventInfo from "./components/EventInfo/EventInfo";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<MainListing />} />
         <Route path="/resources" element={<OtherResources />} />
         {/* <Route path="/feed" element={<Feed />} /> */}
-        <Route path="/feed" element={<Feed2 />} />
+        <Route path="/feed" element={<Feed3 />} />
 
         <Route path="/org/:id" element={<EventsView />} />
         <Route path="/feed/events/:eventId" element={<EventInfo />} />

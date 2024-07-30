@@ -1,6 +1,7 @@
 import Card from "./Card";
 import style from "./MainListing.module.css";
 import useFetch from "./hooks/useFetch";
+import Filter from "./components/Filter/Filter";
 
 function MainListing() {
   const { apiData, loading, error } = useFetch("/db/listings.json");
@@ -9,6 +10,7 @@ function MainListing() {
     <div>
       <h1>Organizations</h1>
       <p>Organizations that regularly host online integration circles </p>
+      <Filter />
       <div className={style.row}>
         {loading && <span>Loading.....</span>}
         {error && !loading && <span>Error in fetching data ...</span>}

@@ -1,0 +1,23 @@
+.list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    margin: 10px
+}
+
+.filterButton {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+}
+.filterButton:active {
+    /* background-color: salmon; */
+}
+
+.filterButton:hover {
+    background-color: #f8f7f4;
+}

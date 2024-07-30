@@ -18,7 +18,6 @@ function Navbar() {
           <p className={style.navLogo}>Integration Finder</p>
         </Link>
         <ul className={style.navList}>
-          Resources
           <Link to="/" className={style.link}>
             Organizations
           </Link>

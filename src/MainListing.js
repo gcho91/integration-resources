@@ -2,9 +2,14 @@ import Card from "./Card";
 import style from "./MainListing.module.css";
 import useFetch from "./hooks/useFetch";
 import Filter from "./components/Filter/Filter";
+import { useEffect } from "react";
 
 function MainListing() {
   const { apiData, loading, error } = useFetch("/db/listings.json");
+
+  useEffect(() => {
+    console.log("apidata", apiData);
+  }, [apiData]);
 
   return (
     <div>
